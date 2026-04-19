@@ -1,0 +1,97 @@
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #f3f4f6;
+    background:
+        radial-gradient(circle at top, #2c2f33 0%, #1e1f22 45%, #111214 100%);
+    padding: 2.5rem 1rem;
+}
+
+h1, h2 {
+    width: min(900px, 100%);
+    text-align: center;
+    color: #ffffff;
+    margin: 0 0 1rem;
+}
+
+table {
+    width: min(900px, 100%);
+    border-collapse: collapse;
+    background: #2b2d31;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+    margin-bottom: 1.5rem;
+}
+
+th, td {
+    border: 1px solid #3f4147;
+    padding: 0.9rem 1rem;
+    text-align: left;
+}
+
+th {
+    background: #5865f2;
+    color: #ffffff;
+}
+
+tr:nth-child(even) td {
+    background: #313338;
+}
+
+tr:nth-child(odd) td {
+    background: #2b2d31;
+}
+
+form {
+    width: min(500px, 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+    background: #2b2d31;
+    padding: 1.25rem;
+    border: 1px solid #3f4147;
+    border-radius: 14px;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.28);
+}
+
+input, button {
+    font: inherit;
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    border: 1px solid #3f4147;
+    background: #1e1f22;
+    color: #f3f4f6;
+}
+
+input::placeholder {
+    color: #9ca3af;
+}
+
+input:focus {
+    outline: none;
+    border-color: #5865f2;
+    box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.22);
+}
+
+button {
+    background: linear-gradient(180deg, #5865f2 0%, #4752c4 100%);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+button:hover {
+    filter: brightness(1.06);
+    transform: translateY(-1px);
+}
+
+button:active {
+    transform: translateY(0);
+}

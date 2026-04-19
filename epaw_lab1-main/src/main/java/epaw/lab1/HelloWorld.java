@@ -22,7 +22,7 @@ public class HelloWorld extends HttpServlet {
         
         out.println("<!DOCTYPE html>");
         out.println("<html>");
-        out.println("<head><title>Users List</title></head>");
+        out.println("<head><title>Users List</title><link rel='stylesheet' href='styles.css'></head>");
         out.println("<body>");
         out.println("<h1>Users from Database</h1>");
         out.println("<table border='1'>"); //Table in HTML, with a border of 1 pixel
@@ -56,7 +56,7 @@ public class HelloWorld extends HttpServlet {
         out.println("</table>");
 
         out.println("<h2>New user</h2>");
-        out.println("<form method='POST' action='/hello'>"); //Adding the FORM to the page (allows to send data to the server)
+        out.println("<form method='POST' action='" + request.getContextPath() + "/hello'>"); //Adding the FORM to the page (allows to send data to the server)
         out.println("<input type='text' name='name' placeholder='Name'>");
         out.println("<input type='text' name='description' placeholder='Description'>");
         out.println("<button type='submit'>Save</button>");
@@ -81,6 +81,6 @@ public class HelloWorld extends HttpServlet {
                     e.printStackTrace();
                     
                 }
-                response.sendRedirect("/hello"); //This is done to refresh the page and show the updated list of users, including the newly added user.
+                response.sendRedirect(request.getContextPath() + "/hello"); //This is done to refresh the page and show the updated list of users, including the newly added user.
     }
 }
