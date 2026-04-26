@@ -42,7 +42,7 @@ public class HelloWorld extends HttpServlet {
                 String name = rs.getString("name");
                 String description = rs.getString("description");
                 
-                out.println("<tr>"); //For showing the data in the HTML table
+                out.println("<tr>"); //For showing the data in the HTML table.
                 out.println("<td>" + id + "</td>");
                 out.println("<td>" + name + "</td>");
                 out.println("<td>" + description + "</td>");
